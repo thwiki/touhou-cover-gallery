@@ -1,0 +1,23 @@
+{
+	"name": "touhou-cover-gallery",
+	"version": "1.0.0",
+	"description": "",
+	"type": "module",
+	"scripts": {
+		"setup": "npx vercel login && npx vercel link",
+		"start": "npx vercel dev",
+		"deploy": "npx vercel deploy --prod"
+	},
+	"repository": {
+		"type": "git",
+		"url": "git+https://github.com/thwiki/touhou-cover-gallery.git"
+	},
+	"license": "MIT",
+	"bugs": {
+		"url": "https://github.com/thwiki/touhou-cover-gallery/issues"
+	},
+	"dependencies": {
+		"vercel": "^28.6.0"
+	},
+	"devDependencies": {}
+}
