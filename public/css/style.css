@@ -35,6 +35,7 @@ body {
 	position:absolute;
 	top:0;
 	left:0;
+	transition: left 0.4s ease, top 0.4s ease;
 }
 
 #portfolio .gallery {
@@ -56,11 +57,6 @@ body {
 	background-repeat:no-repeat;
 	outline:none;
 	text-indent:-9999px;
-}
-
-#portfolio .arrows .prev,
-#portfolio .arrows .up {
-	display:none;
 }
 
 #portfolio .arrows .up,
@@ -125,12 +121,24 @@ body {
 	height:100%;
 }
 
-#portfolio .item div img {
+#portfolio .item div img, #portfolio .item div .title{
 	position:absolute;
 	top:0;
 	left:50%;
 	margin-left:-200px;
 	height:400px;
+}
+
+#portfolio .item div .title{
+	z-index: 1;
+    font-size: 1rem;
+    color: #fff;
+    background-color: #0000008f;
+    background-position: center;
+    height: auto;
+    width: auto;
+    padding: 5px;
+	top: 92%;
 }
 
 #portfolio .paths {
