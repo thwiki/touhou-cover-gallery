@@ -113,6 +113,32 @@ new Vue({
                         break;
                 }
             });
+
+            // 监听触屏事件
+            var startX, startY;
+            window.addEventListener('touchstart', (event) => {
+                startX = event.touches[0].clientX;
+                startY = event.touches[0].clientY;
+            });
+            window.addEventListener('touchend', (event) => {
+                var endX = event.changedTouches[0].clientX;
+                var endY = event.changedTouches[0].clientY;
+                var deltaX = endX - startX;
+                var deltaY = endY - startY;
+                if (Math.abs(deltaX) > Math.abs(deltaY)) {
+                    if (deltaX > 30) {
+                        this.handleLeft();
+                    } else if (deltaX < -30) {
+                        this.handleRight();
+                    }
+                } else {
+                    if (deltaY > 30) {
+                        this.handleUp();
+                    } else if (deltaY < -30) {
+                        this.handleDown();
+                    }
+                }
+            });
         },
         handleUp() {
             // 当纵向索引大于0时，纵向索引减一
