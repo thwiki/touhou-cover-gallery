@@ -59,8 +59,8 @@ window.galleryImages = [
         { src: 'images/cd/c7.jpg', alt: '伊奘诺物质' },
         { src: 'images/cd/c8.jpg', alt: '燕石博物志' },
         { src: 'images/cd/c9.jpg', alt: '旧约酒馆' },
-        { src: 'images/cd/c10.jpg', alt: '虹色的北斗七星' },
-        { src: 'images/cd/c11.jpg', alt: '七夕坂梦幻能' },
+        { src: 'images/cd/c95.jpg', alt: '虹色的北斗七星' },
+        { src: 'images/cd/c10.jpg', alt: '七夕坂梦幻能' },
     ],
     // 旧作OST
     [
