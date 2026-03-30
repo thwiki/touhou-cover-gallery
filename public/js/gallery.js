@@ -119,12 +119,16 @@ new Vue({
             window.addEventListener('touchstart', (event) => {
                 startX = event.touches[0].clientX;
                 startY = event.touches[0].clientY;
-            });
+            }, { passive: true });
             window.addEventListener('touchend', (event) => {
                 var endX = event.changedTouches[0].clientX;
                 var endY = event.changedTouches[0].clientY;
                 var deltaX = endX - startX;
                 var deltaY = endY - startY;
+                if(window.scrollY === 0 && deltaY > 0) {
+                    // 当页面滚动到顶部并且是向下滑动时，阻止默认的滚动行为
+                    event.preventDefault();
+                }
                 if (Math.abs(deltaX) > Math.abs(deltaY)) {
                     if (deltaX > 30) {
                         this.handleLeft();
@@ -138,7 +142,7 @@ new Vue({
                         this.handleDown();
                     }
                 }
-            });
+            }, { passive: false });
         },
         handleUp() {
             // 当纵向索引大于0时，纵向索引减一
